@@ -10,25 +10,21 @@
         let notasTurma = [];
         let contAluno = 1;
         let soma = 0;
-        let media = 0
-
-        while(true){
-            var nota = Number(prompt("Digite a nota do "+contAluno+"º  aluno: " ));
-            if(nota < 0){
-                break;
-            }
-            else{
+        let media = 0;
+        var nota = Number(prompt("Digite a nota do "+contAluno+"º  aluno: " ));
+        while(nota>=0){
                 contAluno++;
                 notasTurma.push(nota)
+                var nota = Number(prompt("Digite a nota do "+contAluno+"º  aluno: " ));
             }
-       }
+      
 
     for (let i of notasTurma) {
         soma = soma+i;
     }
 
     media = soma/notasTurma.length;
-    document.write("A média da turma foi: "+media+"<br>");
+    document.write("A média da turma foi: "+media.toFixed(2)+"<br>");
 
     contAluno =0;
     for (let x of notasTurma) {
@@ -42,7 +38,7 @@
             var situacao =" Reprovação"
         }
         contAluno++;
-        document.write("a nota do "+(contAluno)+"º aluno é: "+x.toFixed(2)+" | Situação: "+situacao+"<br>");
+        document.write("a nota do "+(contAluno)+"º aluno é: "+x+"  Situação: "+situacao+"<br>");
     }
 
 
