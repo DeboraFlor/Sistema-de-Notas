@@ -29,13 +29,13 @@
     contAluno =0;
     for (let x of notasTurma) {
         if(x >= 6){
-            var situacao = "Aprovação"
+            situacao = "Aprovação"
         }
         else if(x>=2 && x < 6){
-            var situacao = "Prova final"
+             situacao = "Prova final"
         }
         else{
-            var situacao =" Reprovação"
+             situacao =" Reprovação"
         }
         contAluno++;
         document.write("a nota do "+(contAluno)+"º aluno é: "+x+"  Situação: "+situacao+"<br>");
